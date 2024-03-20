@@ -15,9 +15,10 @@
     <!-- Main node -->
     <!-- <node name="orb_slam3_mono" pkg="orb_slam3_ros_wrapper" type="orb_slam3_ros_wrapper_mono" output="screen"> -->
 
-    <node name="orb_slam3" pkg="orb_slam3_ros" type="ros_mono" output="screen">
+    <node name="orb_slam3" pkg="orb_slam3_ros" type="ros_rgbd" output="screen">
         <!-- change the topics according to the dataset -->
-        <remap from="/camera/image_raw"     to="/bebop/image_raw"/>
+        <remap from="/camera/image_raw"     to="/camera/color/image_raw"/>
+	<remap from="/camera/depth_registered/image_raw"   to="/camera/depth/image_rect_raw"/>
         <!-- <remap from="/imu"                  to="/bebop/imu"/> -->
 
 
@@ -27,7 +28,7 @@
         <!-- Parameters for original ORB-SLAM3 -->
         <param name="map_name" type="string" value="$(arg map_name)" />
         <param name="voc_file"      type="string" value="$(find orb_slam3_ros)/orb_slam3/Vocabulary/ORBvoc.txt.bin"/>
-        <param name="settings_file" type="string" value="$(find odom_slam_sensor_fusion)/config/bebop2_imu.yaml"/>
+        <param name="settings_file" type="string" value="$(find orb_slam3_ros)/config/RGB-D/TUM1.yaml"/>
 
 
 

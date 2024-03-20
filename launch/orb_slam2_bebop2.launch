@@ -5,7 +5,7 @@
   <node name="orb_slam2_mono" pkg="orb_slam2_ros"
       type="orb_slam2_ros_mono" output="screen">
 
-       <remap from="/camera/image_raw" to="/bebop/image_raw" />
+       <remap from="/camera/image_raw" to="/camera/color/image_raw" />
        <remap from="/camera/camera_info" to="/bebop/camera_info" />
 
 
@@ -58,5 +58,5 @@
 
 <!-- 
   <node name="remap_camera" pkg="topic_tools"
-      type="relay" output="screen" args="/bebop/image_raw /camera/image_raw"/> -->
+      type="relay" output="screen" args="/camera/color/image_raw /camera/image_raw"/> -->
 </launch>

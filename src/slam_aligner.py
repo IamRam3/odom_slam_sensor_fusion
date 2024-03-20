@@ -9,7 +9,7 @@ import ros_numpy
 from nav_msgs.msg import Odometry
 from std_msgs.msg import Float64, Empty, Bool
 from std_srvs.srv import Trigger, TriggerRequest, TriggerResponse, SetBool, SetBoolRequest, SetBoolResponse
-from bebop_msgs.msg import Ardrone3PilotingStateAltitudeChanged
+#from bebop_msgs.msg import Ardrone3PilotingStateAltitudeChanged
 
 from scipy.spatial.transform import Rotation
 

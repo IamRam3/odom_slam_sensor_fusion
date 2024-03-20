@@ -8,7 +8,7 @@ from geometry_msgs.msg import PoseStamped, TwistStamped, Twist, Point, Pose
 from nav_msgs.msg import Odometry
 from std_msgs.msg import Float64, Empty, Bool
 from std_srvs.srv import Trigger, TriggerRequest, TriggerResponse, SetBool, SetBoolRequest, SetBoolResponse
-from bebop_msgs.msg import Ardrone3PilotingStateAltitudeChanged
+#from bebop_msgs.msg import Ardrone3PilotingStateAltitudeChanged
 import ros_numpy
 
 
